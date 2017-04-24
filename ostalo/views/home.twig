@@ -1,0 +1,54 @@
+{% extends 'templates/app.twig' %}
+
+{%block content %}
+
+		<div class="container">
+		{% if auth.check %}
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>User id</th>
+					<th>User name</th>
+			        <th>User email</th>
+			        <th>Update user data</th>
+				    <th>Created at</th>
+				    <th>Updated at</th>
+				    <th>Slika</th>
+				    <th>Delete user data</th>
+
+				</tr>
+		    </thead>
+			{% for i in user %}
+				<tbody>
+					<tr>
+						<td>{{ i.id }}</td>
+				        <td>{{ i.name }}</td>
+				        <td><form method="post" action="{{ path_for('update') }}" role="form" enctype="multipart/form-data">
+				        <input type="text" id="email" name="email" value="{{ i.email }}"></input></td>
+				          <td>
+				        	
+				        		 <input type="hidden" name="update" value="{{ i.id|e }}">
+				        		 <button type="submit" class="btn btn-primary">Update</button>
+				        		 {{ csrf.field | raw }}
+				        	
+				        </td>
+				        </form>
+				        <td>{{ i.created_at}}</td>
+				        <td>{{ i.updated_at }}</td>
+				        <td><img src="{{ base_url() }}/slika/{{ i.slika }}" width="50px" height="50px">Slika</td>
+				      
+				        <td>
+				        	<form method="post" action="{{ path_for('delete') }}">
+				        		 <input type="hidden" name="delete" value="{{ i.id|e }}">
+				        		 <button type="submit" name="dugme"class="btn btn-danger">Delete</button>
+				        		 {{ csrf.field | raw }}
+				        	</form>
+				        </td>
+			      	</tr>
+			    </tbody>	
+			{% endfor %}
+		</table>
+		{% endif %}
+	</div>	
+
+{%endblock %}

@@ -1,0 +1,31 @@
+﻿Ako pita nesto jos dodatno kako radi reci da si radio po ovom tutorijalu, on je nase vezbe radio po ovom tutorijalu. Mozes da pogledas da vidis kako radi neki deo koda po ovome ovde.
+
+https://www.youtube.com/watch?v=RhcQXFeor9g
+
+Sifre svih korisnika su 123
+
+
+.htacces : To uvek isto pise, ako njega nemamo I da ukucamo neku rutu iz projekta /auth/signup Apache web server ce traziti folder /auth/signup. Da bi to izbegli, pomocu koda u tom fajlu ukljucujemo URL rewriting I onda ce razumeti folder da trazimo rutu sa tim url-om
+
+Ostalo I views folder I sta je Twig/View : To je SLIM paket ili dependecy I koristimo ga da bi prikalazi front-end korisniku. U sustini sve sto korisnik vidi mi cemo mu preko twiga prikazati sav HTML CSS I JAVASRIPT kod.
+
+U composer.json-u : 
+	- ”require” : Izlistava sve zavistne delove nase aplikacije “Dependencies”
+
+- ”autoload” : Treba da automatski ucitamo bilo koji fajl koji napravimo, jer pravimo Middleware, pravila za validaciju I modele. Pomocu PSR-4 cemo to da radimo, samo je to. Prvo napisemo autload, sledece kako cemo da to uradimo, mi pomocu PSR-4, onda ime za nasu aplikaciju, u ovom slucaju je App, ali moze bilo koje ime. Stavljamo \\ jer jedan \ znaci da je to escape naredba, (da ga cita za to sto jeste ne kao promenljivu) onda odakle hocemo da to ucitavamo to je iz “app” foldera
+
+
+VIEW folder :
+U njemu stavljamo nas sadrzaj sto se vidi na sajtu.
+App.twig Sadrzi najobicnije html tagove I tu stavljamo bootstrap I jquary dodatak da bi izgenerisali sadrzaj. 
+
+< div class=”container”> : u njemu stavljamo sav sadrzaj I  preko twig-a definisemo blok sadrzaja kao {% block content%} I zatvaramo sa {%endblock%}.
+
+Iznad <div container-a> ubacujemo navigacioni meni preko {%include ‘putanje koju hocemo da ubacimo’ %}
+U home.twig fajlu pruduzujemo sadrzaj sa {%extends ‘templates/app.twig’%} I mozemo da stavimo sta hocemo unutar njega da bi prikazali sadrzaj sa {%block content%} .
+
+Preko twiga mozemo da imamo if else uslove gde  proveravamo dal I ima gresaka I da li su neka polja koja smo uneli dobra I da sacuvamo a ostala da budu prazna I da nam izlista kroz for petlju .
+
+
+
+
