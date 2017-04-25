@@ -2,7 +2,7 @@
 git push origin
 start "chrome.exe" https://www.youtube.com/watch?v=9D-QD_HIfjA&t=0m18s
 
-#Salt-N-Pepa - Push it
+#Salt-N-Pepa - Push it, push it
 #
 #https://www.youtube.com/watch?v=vCadcBR95oU
 
