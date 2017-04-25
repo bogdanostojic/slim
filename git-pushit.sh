@@ -1,6 +1,9 @@
 
 git push origin
-start "chrome.exe" https://www.youtube.com/watch?v=9D-QD_HIfjA&t=0m18s
+
+start "firefox.exe" https://www.youtube.com/watch?v=vCadcBR95oU
+echo \'Real gooood firefox!\'
+
 
 #Salt-N-Pepa - Push it, push it
 #
