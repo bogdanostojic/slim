@@ -42,6 +42,7 @@ use Slim\Exception\ContainerException as SlimContainerException;
  * @property-read callable notAllowedHandler
  * @property-read \Slim\Interfaces\CallableResolverInterface callableResolver
  */
+
 class Container extends PimpleContainer implements ContainerInterface
 {
     /**
