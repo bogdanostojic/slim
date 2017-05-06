@@ -1,4 +1,4 @@
-{% include footer.html %}
+title: [The title of your site]
 
 # slim
 
