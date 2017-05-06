@@ -1,6 +1,8 @@
 
 git push origin
-start "" https://www.youtube.com/watch?v=vCadcBR95oU
+
+start https://www.youtube.com/watch?v=vCadcBR95oU /MIN
+
 
 
 #Salt-N-Pepa - Push it, push it
