@@ -1,7 +1,7 @@
 
 git push origin
 
-if[ "chrome.exe" != start]; then
+if[ "start" != "chrome.exe" ]; then
 start  https://www.youtube.com/watch?v=vCadcBR95oU http://imgur.com/uGM9rmw as true
 else
   start  https://www.youtube.com/watch?v=vCadcBR95oU as false
