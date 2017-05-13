@@ -1,7 +1,11 @@
 
 git push origin
 
-start  https://www.youtube.com/watch?v=vCadcBR95oU
+if[ !"chrome.exe"]; then
+start  https://www.youtube.com/watch?v=vCadcBR95oU http://imgur.com/uGM9rmw as true
+else
+  start  https://www.youtube.com/watch?v=vCadcBR95oU as false
+fi
 
 
 
