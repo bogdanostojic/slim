@@ -24,7 +24,7 @@ $app = new \Slim\App([							//$app je instanca SLIM-a, i prosledjjemo parametre
 
 ]);
 
-
+echo 'radi stash?';
 
 $container = $app->getContainer();						//$container, pravimo instancu kontejnera. Kontejner je u sustini niz ciji su elementi objekti nekih klasa, znaci niz objekata.
 														//Preko njega povezujemo sve sto hocemo za nas kontejner, kao sto je klasa za autentikaciju, validaciju i rad za bazama
